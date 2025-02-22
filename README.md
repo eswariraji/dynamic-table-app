@@ -45,5 +45,5 @@ A web application that allows users to dynamically manage table data with sortin
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/dynamic-table-app.git
+   git clone https://github.com/eswariraji/dynamic-table-app.git
    cd dynamic-table-app
