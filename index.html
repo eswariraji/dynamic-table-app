@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Dynamic Table</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: antiquewhite;
+        }
+    
+        table {
+            width: 60%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+    
+        th, td {
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            cursor: pointer;
+        }
+        #pagination{
+            margin:20px;
+        }
+        #pagination button{
+            margin:2px;
+            padding: 5px 10px;
+            cursor: pointer;
+            background-color: #f0f0f0;
+            border: 1px solid #ddd;
+        }
+        #pagination button active-page{
+            background-color: #007bff;
+            color:white;
+            border: 1px solid #007bff;
+
+        }
+    </style>
+</head>
+<body>
+    <h2>Dynamic Table with Basic JavaScript</h2>
+
+    <!-- Input Form -->
+    <label>Enter Name:</label>
+    <input type="text" id="nameInput">
+    <label>Enter Age:</label>
+    <input type="text" id="ageInput">
+    <button onclick="addRow()">Add Entry</button>
+    <p id="errorMessage" style="color: red;"></p>
+    
+
+    <!-- Search Filter -->
+    <br><br>
+    <label>Search:</label>
+    <input type="text" id="searchInput" onkeyup="filterTable()">
+
+    <!-- Data Table -->
+    <table border="1" id="dataTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th onclick="sortTable('name')">Name</th>
+                <th onclick="sortTable('age')">Age</th>
+            </tr>
+        </thead>
+        <tbody id="tableBody"></tbody>
+    </table>
+    <div id="pagination"></div>
+    
+    <!-- Export Button -->
+    <button onclick="exportToCSV()">Export to CSV</button>
+
+    <script src="script.js"></script>
+</body>
+</html>
